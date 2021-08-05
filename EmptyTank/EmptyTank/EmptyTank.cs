@@ -9,6 +9,7 @@ namespace EmptyTank
         /// The active vessel stored as a List of parts
         /// </summary>
         private static List<Part> vessel;
+
         public static void EmptyTanks()
         {
             // Update the parts list of the vessel
@@ -31,7 +32,7 @@ namespace EmptyTank
             // Loop through all parts in the vessel
             foreach (Part part in vessel)
             {
-                // Loop through all resources in the part and set its amount to 0
+                // Loop through all resources in the part and set its amount to the max it can hold
                 foreach (var res in part.Resources)
                 {
                     res.amount = res.maxAmount;
